@@ -48,6 +48,8 @@
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+  transform: translateY(100%);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -295,7 +297,7 @@
     .intro__message {
       opacity: 1;
       transform: translateY(0px);
-      transition: opacity 1s ease 0.2s, transform 0.5s ease 0.2s;
+      transition: opacity 1s ease 0.9s, transform 0.5s ease 0.9s;
     }
   }
 }
