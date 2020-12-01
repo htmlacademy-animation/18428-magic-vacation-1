@@ -5,11 +5,9 @@
   min-height: 100vh;
   z-index: 1;
   overflow: hidden;
-  // visibility: visible;
 
   &--hidden {
     display: none;
-    // visibility: hidden;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -316,7 +314,12 @@
 }
 
 .screen--prizes {
-  background-color: $c-dark;
+  // background-color: $c-dark;
+  &.active {
+    .screen__base {
+      transform: translateY(0%);
+    }
+  }
 }
 
 .screen--game {
@@ -373,4 +376,15 @@
 
 .screen--rules {
   background-color: $c-dark;
+}
+
+.screen__base {
+  width: 100%;
+  height: 100%;
+  background-color: $c-dark;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition: all .6s ease;
 }
