@@ -52,6 +52,127 @@
     object-fit: cover;
     object-position: center;
   }
+  .leaf-blue-1 {
+    position: absolute;
+    width: 350px;
+    height: 280px;
+    object-fit: contain;
+    top: 50%;
+    left: 51%;
+    transform: rotate(-40deg) translateY(-70px);
+    opacity: 0;
+    animation: startLeafBlue1 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  @keyframes startLeafBlue1 {
+    0% {
+      transform: rotate(-40deg) translateY(-70px);
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(0deg) translateY(0px);
+      opacity: 1;
+    }
+  }
+  .leaf-blue-2 {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    object-fit: contain;
+    right: 52%;
+    top: 50%;
+    transform: rotate(40deg) translateY(-70px);
+    opacity: 0;
+    animation: startLeafBlue2 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  @keyframes startLeafBlue2 {
+    0% {
+      transform: rotate(40deg) translateY(-70px);
+      opacity: 0;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(0deg) translateY(0px);
+      opacity: 1;
+    }
+  }
+  .leaf-green {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    object-fit: contain;
+    right: 40%;
+    margin-right: -150px;
+    // bottom: 16%;
+    top: 68%;
+    margin-top: -75px;
+    transform-origin: center;
+    transform: rotate(-40deg) translateY(-70px);
+    opacity: 0;
+    animation: startLeafBlue1 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.2s;
+  }
+  .suitcase {
+    position: absolute;
+    width: 450px;
+    height: 440px;
+    object-fit: contain;
+    right: 50%;
+    margin-right: -225px;
+    // bottom: 5%;
+    top: 60%;
+    margin-top: -220px;
+    transform: translateY(55%) scale(0);
+    animation: startSuitcase 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+  @keyframes startSuitcase {
+    0% {
+      transform: translateY(55%) scale(0);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+    }
+  }
+  .flamingo {
+    position: absolute;
+    width: 350px;
+    height: 300px;
+    object-fit: contain;
+    left: 44%;
+    margin-left: -175px;
+    top: 65%;
+    margin-top: -150px;
+    animation: startFlamingo 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+                moveFlamingo 1.5s ease infinite alternate 0.7s;
+
+    transform:  rotate(-15deg);
+    opacity: 0;
+  }
+  @keyframes startFlamingo {
+    0% {
+      transform: translateY(55%) rotate(-15deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+
+    }
+    100% {
+      transform: translateY(0%) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes moveFlamingo {
+    0% {
+      transform: translateY(0%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(10%) rotate(-10deg);
+    }
+  }
 }
 
 .result__title {
@@ -266,5 +387,42 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: 45rem;
     }
+  }
+}
+
+.result__form {
+  .form__button {
+    opacity: 0;
+    color: #fff;
+    animation: showBtn 0.6s ease-in-out forwards 0.2s;
+  }
+  .form__field {
+    width: 0%;
+    opacity: 0;
+    animation: showInput 0.8s ease forwards 0.25s;
+  }
+}
+@keyframes showBtn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100%  {
+    opacity: 1;
+    color: #5f458c;
+  }
+}
+@keyframes showInput {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    width: calc(100% - 21rem);
   }
 }

@@ -295,7 +295,11 @@
     .intro__message {
       opacity: 1;
       transform: translateY(0px);
-      transition: opacity 1s ease 0.9s, transform 0.5s ease 0.9s;
+      transition: opacity 1s ease 1s, transform 0.5s ease 1s;
+    }
+    .intro__label {
+      opacity: 1;
+      transition: all 0.4s ease 1.6s;
     }
   }
 }
@@ -310,6 +314,8 @@
   @media (orientation: portrait) {
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
+  }
+  &.active {
   }
 }
 
@@ -387,4 +393,20 @@
   left: 0;
   transform: translateY(100%);
   transition: all .6s ease;
+}
+
+.text__word {
+  display: inline-block;
+  margin: 0 5px;
+  overflow: hidden;
+}
+.text__word > span {
+    transform: translate3d(0, 2em, 0);
+    display: inline-block;
+    vertical-align: sub;
+}
+.screen.active {
+  .letters-animation.active .text__word > span {
+      transform: translate3d(0, 0, 0);
+  }
 }
