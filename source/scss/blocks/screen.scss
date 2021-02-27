@@ -316,6 +316,13 @@
     background-position: top center, bottom center;
   }
   &.active {
+    .slider__control {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    }
+    .slider__pagination.swiper-pagination {
+      opacity: 1;
+    }
   }
 }
 
@@ -325,6 +332,7 @@
     .screen__base {
       transform: translateY(0%);
     }
+
   }
 }
 

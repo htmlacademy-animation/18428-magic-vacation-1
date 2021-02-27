@@ -236,6 +236,16 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  animation: showTitleBtnResult 0.3s ease;
+
+  @keyframes showTitleBtnResult {
+    0% {
+      opacity: 0;
+    }
+    100%  {
+      opacity: 1;
+    }
+  }
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
@@ -268,6 +278,21 @@
     width: 4rem;
     height: 4rem;
     color: $c-dark;
+    animation: showBtnResult 0.5s ease;
+
+    @keyframes showBtnResult {
+      0% {
+        opacity: 0;
+        transform: translateX(80px) rotate(80deg);
+      }
+      50% {
+        opacity: 1;
+      }
+      100%  {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+      }
+    }
 
     @media (min-width: $stop-scaling) {
       margin-left: 15px;
