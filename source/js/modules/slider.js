@@ -53,12 +53,19 @@ export default () => {
           slideChange: () => {
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
+              document.body.classList.remove('theme--blue', 'theme--violet');
             } else if (storySlider.activeIndex === 2) {
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
+              document.body.classList.add('theme--blue');
+              document.body.classList.remove('theme--violet', 'theme--light-blue');
             } else if (storySlider.activeIndex === 4) {
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
+              document.body.classList.add('theme--light-blue');
+              document.body.classList.remove('theme--blue', 'theme--violet');
             } else if (storySlider.activeIndex === 6) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
+              document.body.classList.add('theme--violet');
+              document.body.classList.remove('theme--light-blue');
             }
           },
           resize: () => {
