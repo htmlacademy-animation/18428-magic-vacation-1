@@ -121,3 +121,12 @@ const animationTopScreenTextLine6 = new AccentTypographyBuild(`.game__title`, 50
 setTimeout(()=>{
   animationTopScreenTextLine6.runAnimation();
 }, 500);
+
+
+document.querySelector(`.js-menu-link[href="#prizes"]`).addEventListener(`click`, () => {
+    document.querySelectorAll(`.prizes__icon img`)
+      .forEach((imagePrizes) => {
+        const [src] = imagePrizes.src.split(`?`);
+        imagePrizes.src = `${src}?_=${String(new Date().getTime())}`;
+      });
+  });
