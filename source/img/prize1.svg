@@ -217,6 +217,8 @@
     begin="2"
     from="1"
     to="0"
+    values="1; 0.5; 0; 0"
+    keyTimes="0; 0.06; 0.1; 1"
   />
 </g>
 
@@ -351,9 +353,9 @@
     attributeName="transform"
     type="translate"
     begin="2"
-    from="-50"
+    from="-100"
     to="0"
-    dur="0.3"
+    dur="0.2"
     fill="freeze"
   />
   <svg width="350" height="330" viewBox="0 0 350 330" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -364,6 +366,8 @@
           begin="2"
           from="-50"
           to="0"
+          values="-50; 10; -2; 0"
+          keyTimes="0; 0.8; 0.9; 1"
           dur="0.3"
           fill="freeze"
         />
@@ -383,14 +387,6 @@
           fill="white"/>
       </g>
       <g id="seat">
-        <animate
-          attributeName="opacity"
-          fill="freeze"
-          from="0"
-          to="1"
-          dur="1"
-          begin="1"
-        />
         <animate
           attributeName="opacity"
           fill="freeze"
