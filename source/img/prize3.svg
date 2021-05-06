@@ -170,12 +170,12 @@
         calcMode="spline"
         fill="freeze"
         begin="caseOpening.end"
-        dur="1.2s"
+        dur="2s"
       />
       <animateTransform
       attributeName="transform"
       type="rotate"
-      begin="caseOpening.end + 1s"
+      begin="caseOpening.end + 2s"
       values="0; 3; -3; -1; 0"
       keyTimes="0; 0.1; 0.3; 0.7; 1"
       dur="2s"
