@@ -265,7 +265,8 @@
     font-weight: 400;
     font-size: 12rem;
     line-height: 0.55;
-
+    width: 175px;
+    text-align: right;
     @media (min-width: $stop-scaling) {
       font-size: 120px;
     }
