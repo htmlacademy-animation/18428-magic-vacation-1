@@ -10,6 +10,7 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import game from './modules/game.js';
 import prizes from './modules/prizes.js';
+import winPimaryImages from './modules/win-primary-images.js';
 
 // init modules
 mobileHeight();
@@ -22,6 +23,7 @@ form();
 social();
 game();
 prizes();
+winPimaryImages();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
